@@ -52,10 +52,10 @@ graph TB
 
     subgraph "Application Layer"
         API[API Gateway]
-        Auth[Authentication]
+        oAuth2[Authentication]
         StoryGen[Story Generation Service]
         Chat[RAG Chat Service]
-        NFTAccess[NFT Access Management]
+        Access[Access Management]
     end
 
     subgraph "Endless Storytelling Engine"
@@ -79,13 +79,13 @@ graph TB
     subgraph "Data Layer"
         VDB[(Vector Database)]
         Cache[(Redis Cache)]
-        BC[Blockchain Storage]
+        BC[Storage]
     end
 
     subgraph "Infrastructure"
         Together[Together AI]
         Replicate[Replicate]
-        Solana[Solana Network]
+        Cloud[Cloud Service]
     end
 
     Frontpage --> API
@@ -94,7 +94,7 @@ graph TB
     API --> Auth
     Auth --> StoryGen
     Auth --> Chat
-    Auth --> NFTAccess
+    Auth --> Access
     
     StoryGen --> COA
     StoryGen --> SGA
@@ -113,7 +113,7 @@ graph TB
     I2I --> Replicate
     
     NFTAccess --> BC
-    BC --> Solana
+    BC --> Cloud
 ```
 
 **Agents**
