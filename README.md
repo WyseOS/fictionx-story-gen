@@ -112,7 +112,7 @@ graph TB
     T2I --> Replicate
     I2I --> Replicate
     
-    NFTAccess --> BC
+    Access --> BC
     BC --> Cloud
 ```
 
