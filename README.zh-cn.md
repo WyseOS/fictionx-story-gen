@@ -92,7 +92,7 @@ graph TB
     API --> Auth
     Auth --> StoryGen
     Auth --> Chat
-    Auth --> NFTAccess
+    Auth --> Access
     
     StoryGen --> COA
     StoryGen --> SGA
