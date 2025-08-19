@@ -50,10 +50,10 @@ graph TB
 
     subgraph "应用层"
         API[API 网关]
-        Auth[身份认证]
+        oAuth2[身份鉴权]
         StoryGen[故事生成服务]
         Chat[RAG 对话服务]
-        NFTAccess[NFT 访问管理]
+        AuthAccess[Access访问管理]
     end
 
     subgraph "Endless Storytelling Engine"
@@ -77,13 +77,13 @@ graph TB
     subgraph "数据层"
         VDB[(向量数据库)]
         Cache[(Redis 缓存)]
-        BC[区块链存储]
+        BC[存储]
     end
 
     subgraph "基础设施"
         Together[Together AI]
         Replicate[Replicate]
-        Solana[Solana 网络]
+        Cloud[CloudService]
     end
 
     Frontpage --> API
@@ -111,7 +111,7 @@ graph TB
     I2I --> Replicate
     
     NFTAccess --> BC
-    BC --> Solana
+    BC --> Cloud
 ```
 
 **Agents**
